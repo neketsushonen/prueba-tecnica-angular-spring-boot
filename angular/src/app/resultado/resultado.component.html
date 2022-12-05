@@ -1,0 +1,30 @@
+<div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+  <header class="masthead mb-auto">
+      <div class="inner">
+        <h3 class="masthead-brand">Prueba Técnica 3IT</h3>
+        <nav class="nav nav-masthead justify-content-center">
+          <a class="nav-link active" href="/">Encuesta</a>
+          <a class="nav-link" href="/resultado">Resultados</a>
+          <a class="nav-link" href="/acercade">Acercade</a>
+        </nav>
+      </div>
+  </header>
+  <main>
+  <section class="py-5 text-center container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Correo</th>
+        <th scope="col">Tipo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr  *ngFor="let tipo of getLista()" >
+            <th scope="row">{{tipo.correo}}</th>
+            <td>{{getTipo(tipo.id)}}</td>      
+      </tr>
+    </tbody>
+  </table>
+</section>
+</main>
+ </div>

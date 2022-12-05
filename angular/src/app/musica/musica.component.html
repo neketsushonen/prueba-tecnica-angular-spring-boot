@@ -1,0 +1,23 @@
+<div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand">Prueba Técnica 3IT</h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" href="/">Encuesta</a>
+            <a class="nav-link" href="/resultado">Resultados</a>
+            <a class="nav-link" href="/acercade">Acercade</a>
+          </nav>
+        </div>
+    </header>
+
+    <main role="main" class="inner cover">
+        <h1 class="cover-heading">Encuesta</h1>
+        <p class="lead">Estilo Musical</p>
+        <select  #teams class="form-select form-select-lg "  aria-label=".form-select-lg  "  (change)="onSelected(teams.value)">
+            <option *ngFor="let tipo of tipos" [value]="tipo.id">{{tipo.name}}</option>
+        </select>
+        <p class="lead">CORREO ELECTRONICO</p>
+        <input type="email"   #mail class="form-control" placeholder="CORREO ELECTRONICO" required="" autofocus="" (change)="onChangeCorreo(mail.value)">
+        <button class="btn btn-lg btn-primary btn-block"  (click)="responder()">Responder</button>
+    </main>
+</div>
