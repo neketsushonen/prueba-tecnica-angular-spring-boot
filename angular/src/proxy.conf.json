@@ -1,0 +1,6 @@
+{
+    "/encuesta":{
+        "target":"http://localhost:10003" 
+        
+    }
+}

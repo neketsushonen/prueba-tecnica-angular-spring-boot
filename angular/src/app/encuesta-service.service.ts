@@ -17,7 +17,7 @@ export class EncuestaService {
 
 
   getEncuestas() {
-    const configUrl= 'http://localhost:10003/encuesta';
+    const configUrl= '/encuesta';
     return this.http.get<Encuesta[]>(configUrl);
 
     
@@ -26,7 +26,7 @@ export class EncuestaService {
 
   addEncuesta(tipo:string,correo:string ) {
 
-    const configUrl= 'http://localhost:10003/encuesta';
+    const configUrl= '/encuesta';
     const params = new HttpParams({  fromObject: { id : tipo,  correo : correo    }  });
     const headers = new HttpHeaders({'Content-Type': 'application/x-www-form-urlencoded'});
    
